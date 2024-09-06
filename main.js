@@ -1,5 +1,5 @@
 const prompt = require('prompt-sync')();
-import ObterTarefa from "./ObterTarefa";
+const ObterTarefa = require('./ObterTarefa');
 
 
 function Main() {

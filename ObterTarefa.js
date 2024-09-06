@@ -1,10 +1,11 @@
 function ObterTarefa(arrayTarefas, id) {
-    for (tarefa of arrayTarefas) {
+    for (let tarefa of arrayTarefas) {
         if (tarefa.id == id) {
-            return console.log(`Tarefa: ${tarefa.nome} \n Tarefa Id: ${tarefa.id}`);
+            console.log(`Tarefa: ${tarefa.nome} \nTarefa Id: ${tarefa.id}`);
+            return; 
         }
     }
-
+    console.log("Tarefa não encontrada");
 }
 
-export default ObterTarefa();
+module.exports = ObterTarefa;
