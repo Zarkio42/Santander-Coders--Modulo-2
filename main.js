@@ -1,5 +1,6 @@
 const prompt = require('prompt-sync')();
 const ObterTarefa = require('./ObterTarefa');
+import { editarTarefa } from './editarTarefa.js';
 
 
 function Main() {
@@ -21,7 +22,7 @@ function Main() {
 
             case '2':
                 console.log("Editando tarefa...");
-                
+                editarTarefa(tarefas);
                 break;
 
             case '3':
