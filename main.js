@@ -2,6 +2,7 @@ const prompt = require('prompt-sync')();
 const adicionarTarefa = require('./adicionarTarefa');
 const ObterTarefa = require('./ObterTarefa');
 const listarTarefas = require('./listarTarefas');
+const editarTarefa = require('./scripts/editarTarefa');
 
 let id = 1;
 let listaDeTarefas = [];
@@ -26,7 +27,7 @@ function Main() {
 
             case '2':
                 console.log("Editando tarefa...");
-                
+                editarTarefa(tarefas);
                 break;
 
             case '3':
