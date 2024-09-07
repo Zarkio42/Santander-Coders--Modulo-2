@@ -16,7 +16,7 @@ function editarTarefa(tarefas, id, tarefaEditada) {
 }
 
 
-export function novaTarefa(tarefas) {
+function novaTarefa(tarefas) {
 let idTarefa = rl.question(`Informe o índice da terefa que deseja editar:`)
     const id = parseInt(idTarefa);
     
@@ -49,3 +49,5 @@ let idTarefa = rl.question(`Informe o índice da terefa que deseja editar:`)
     }
 
 }
+
+module.exports = novaTarefa;

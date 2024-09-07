@@ -1,6 +1,6 @@
 const prompt = require('prompt-sync')();
 const ObterTarefa = require('./ObterTarefa');
-import { editarTarefa } from './editarTarefa.js';
+const editarTarefa = require('./scripts/editarTarefa');
 
 
 function Main() {
