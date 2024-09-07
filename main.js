@@ -1,7 +1,11 @@
 const prompt = require('prompt-sync')();
+const adicionarTarefa = require('./adicionarTarefa');
 const ObterTarefa = require('./ObterTarefa');
+const listarTarefas = require('./listarTarefas');
 const editarTarefa = require('./scripts/editarTarefa');
 
+let id = 1;
+let listaDeTarefas = [];
 
 function Main() {
     console.log("----- Bem Vindo ao Agendador de Tarefas -----\n");
@@ -11,13 +15,14 @@ function Main() {
     console.log(mensagemInicial);
 
     let option;
-    while (option !== '6') {
+    while (option !== '6') { 
         option = prompt("Digite sua opção: ");
         
         switch (option) {
             case '1':
                 console.log("Adicionando nova tarefa...");
-                
+                const descricao = prompt("Descrição da tarefa: ");
+                adicionarTarefa(listaDeTarefas, descricao, id++);                
                 break;
 
             case '2':
@@ -31,12 +36,13 @@ function Main() {
                 break;
 
             case '4':
-                ObterTarefa();
+                const tarefaId = prompt("Digite o ID da tarefa: ");
+                ObterTarefa(listaDeTarefas, tarefaId);
                 break;
 
             case '5':
-                console.log("Listando todas as tarefas...");
-                
+                console.log("Listando todas as tarefas... \n");
+                listarTarefas(listaDeTarefas);
                 break;
 
             case '6':
