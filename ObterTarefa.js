@@ -1,7 +1,7 @@
-function ObterTarefa(arrayTarefas, id) {
-    for (let tarefa of arrayTarefas) {
+function ObterTarefa(lista, id) {
+    for (let tarefa of lista) {
         if (tarefa.id == id) {
-            console.log(`Tarefa: ${tarefa.nome} \nTarefa Id: ${tarefa.id}`);
+            console.log(`Tarefa: ${tarefa.descricao} \nTarefa Id: ${tarefa.id}`);
             return; 
         }
     }
