@@ -1,7 +1,10 @@
 const prompt = require('prompt-sync')();
 const adicionarTarefa = require('./adicionarTarefa');
 const ObterTarefa = require('./ObterTarefa');
+const listarTarefas = require('./listarTarefas');
 
+let id = 1;
+let listaDeTarefas = [];
 
 function Main() {
     console.log("----- Bem Vindo ao Agendador de Tarefas -----\n");
